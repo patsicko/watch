@@ -1,12 +1,15 @@
 .div{
    
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 150px;
+    justify-content: space-between; */
+
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr 1fr 3fr;
+    width: 250px;
     margin: auto;
     height: 50px;
-    border: 6px solid black;
+    
     margin-top: 150px;
     border-radius: 8px;
     background-color: azure;
@@ -16,10 +19,17 @@
 .hour,.min,.sec{
     background-color: black;
     color: white;
-    width: 40px;
-    border-radius: 5px;
+   margin-top: auto;
+   
     justify-content: center;
-    font-size: 35px;
+    font-size: 55px;
+    padding-left: 10px;
+}
+
+.comma{
+    font-size: 40px;
+    padding-left: 8px;
+
 }
 span{
     background-color: aquamarine;
@@ -31,6 +41,7 @@ span{
     grid-template-columns: repeat(3,1fr);
     width: 400px;
     margin:auto;
+    margin-top: 15px;
 
     
 }

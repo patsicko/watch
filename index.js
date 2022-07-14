@@ -86,7 +86,7 @@ function watch(){
     
     let time=document.getElementById("time");
     time.firstElementChild.innerHTML=timer.getHours();
-    time.firstElementChild.nextElementSibling.innerHTML=timer.getMinutes();
+    time.firstElementChild.nextElementSibling.nextElementSibling.innerHTML=timer.getMinutes();
     time.lastElementChild.innerHTML=timer.getSeconds();
 
 }
