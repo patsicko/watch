@@ -75,17 +75,22 @@
 
 
 
-function sec(){
+
+
+function watch(){
+
     setTimeout(()=>{
-       sec();
+       watch();
     },1000)
     let timer=new Date();
-    // console.log(timer); 
+    
     let time=document.getElementById("time");
     time.firstElementChild.innerHTML=timer.getHours();
     time.firstElementChild.nextElementSibling.innerHTML=timer.getMinutes();
     time.lastElementChild.innerHTML=timer.getSeconds();
 
 }
-sec();
+watch();
+
+
 
