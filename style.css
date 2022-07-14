@@ -6,6 +6,10 @@
     width: 150px;
     margin: auto;
     height: 50px;
+    border: 6px solid black;
+    margin-top: 150px;
+    border-radius: 8px;
+    background-color: azure;
    
    
 }
