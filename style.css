@@ -17,10 +17,30 @@
     background-color: black;
     color: white;
     width: 40px;
-    border-radius: 10px;
+    border-radius: 5px;
     justify-content: center;
     font-size: 35px;
 }
 span{
     background-color: aquamarine;
+}
+
+.date{
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 400px;
+    margin:auto;
+
+    
+}
+
+.year,.month,.day{
+    background-color: rgb(149, 201, 246);
+    width: 130px;
+    height: 100px;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 25px;
+  
 }

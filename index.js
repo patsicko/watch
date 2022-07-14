@@ -94,3 +94,21 @@ watch();
 
 
 
+
+function calendar(){
+setTimeout(()=>{
+    calendar();
+},1000)
+
+let days=["Sunday","Monday","Tuesday","Wednesday","Thusday","Friday","Saturday"];
+
+let months=["January","February","March","April","May","June","July","August","September","October","November","December"]
+
+document.getElementById("day").innerHTML=days[new Date().getDay()];
+
+document.getElementById("month").innerHTML=months[new Date().getMonth()];
+document.getElementById("year").innerHTML=new Date().getFullYear();
+
+}
+calendar();
+
