@@ -177,17 +177,26 @@ let numbers=(arr)=>{let promise=new Promise((resolve,reject)=>{
     if(!Array.isArray(arr)){
         reject("not an array!");
     }
-    ``
+    
 
-    let even=arr.filter((item)=>item%2===0)
+let even=arr.filter(item=>item%2===0)
+
+console.log(even);
+
+let mult=even.map(item=>
+    item*2
+)
 
 
-resolve(even);
+// resolve(even);
+resolve(mult);
+
+
  
 })
 
 promise.then((data)=>{
-    console.log(data)
+    console.log(data.map(item=>item+100))
 }).catch((error)=>{
     console.log(error);
 })
@@ -196,7 +205,7 @@ promise.then((data)=>{
 
 let myArr=[3,6,7,8,12,14,18,19];
 let x=[1,3,5,7,9];
-let y="not a number";
+let y=26;
 
 numbers(myArr);
 numbers(x);
