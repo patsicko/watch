@@ -12,9 +12,7 @@
     
     margin-top: 150px;
     border-radius: 8px;
-    background-color: azure;
-   
-   
+    background-color: azure;   
 }
 .hour,.min,.sec{
     background-color: black;
@@ -41,11 +39,8 @@ span{
     grid-template-columns: repeat(3,1fr);
     width: 400px;
     margin:auto;
-    margin-top: 15px;
-
-    
+    margin-top: 15px;  
 }
-
 .year,.month,.day{
     background-color: rgb(149, 201, 246);
     width: 130px;
@@ -53,5 +48,4 @@ span{
     text-align: center;
     padding-top: 20px;
     font-size: 25px;
-  
 }

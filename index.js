@@ -130,18 +130,20 @@ calendar();
 
 
 
- let promise=new Promise((resolve,reject)=>{
-    let x=5;
-    let y=3;
-    let result=x+y;
+//  let promise=new Promise((resolve,reject)=>{
+//     let x=5;
+//     let y=3;
+//     let result=x+y;
 
-    if(result==8){
-        resolve("promise successfull");
-    }
-    else{
-        reject("habaye ikibazo");
-    }
- });
+//     if(result==8){
+//         resolve("promise successfull");
+//     }
+//     else{
+//         reject("habaye ikibazo");
+//     }
+//  });
+
+
 
 //  promise.then((result)=>{
 //     console.log(result);
@@ -152,25 +154,50 @@ calendar();
 
 
 
- let otherPromise=new Promise((resolve,reject)=>{
-    const message="this is a new promise";
-    resolve(message);
+//  let otherPromise=new Promise((resolve,reject)=>{
+//     const message="this is a new promise";
+//     resolve(message);
     
- })
- otherPromise.then((message)=>{
-    console.log(message);
+//  })
+//  otherPromise.then((message)=>{
+//     console.log(message);
+// })
+
+
+//  promise.then((result)=>{
+//     console.log(result);
+//  }).catch((error)=>{
+//     console.log("error");
+
+//  })
+
+
+
+let numbers=(arr)=>{let promise=new Promise((resolve,reject)=>{
+    if(!Array.isArray(arr)){
+        reject("not an array!");
+    }
+    ``
+
+    let even=arr.filter((item)=>item%2===0)
+
+
+resolve(even);
+ 
 })
 
+promise.then((data)=>{
+    console.log(data)
+}).catch((error)=>{
+    console.log(error);
+})
 
- promise.then((result)=>{
-    console.log(result);
- }).catch((error)=>{
-    console.log("error");
+}
 
- })
+let myArr=[3,6,7,8,12,14,18,19];
+let x=[1,3,5,7,9];
+let y="not a number";
 
-
-
-
-
-
+numbers(myArr);
+numbers(x);
+numbers(y);
