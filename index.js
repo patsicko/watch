@@ -73,10 +73,6 @@
 //     console.log(timer.getSeconds());
 // },1000)
 
-
-
-
-
 function watch(){
 
     setTimeout(()=>{
@@ -91,9 +87,6 @@ function watch(){
 
 }
 watch();
-
-
-
 
 function calendar(){
 setTimeout(()=>{
@@ -112,8 +105,6 @@ document.getElementById("year").innerHTML=new Date().getFullYear();
 }
 calendar();
 
-
-
 // function display(something){
 //     console.log(something);
 // }
@@ -122,11 +113,6 @@ calendar();
 //     let result=n+m; callback(result);
 // } 
 //  add(3,5,display);
-
-
-
-
-
 
 
 
@@ -150,8 +136,6 @@ calendar();
 //  }).catch((error)=>{
 //     console.log(error);
 //  });
-
-
 
 
 //  let otherPromise=new Promise((resolve,reject)=>{
@@ -210,3 +194,8 @@ let y=26;
 numbers(myArr);
 numbers(x);
 numbers(y);
+
+
+
+let wait=time=>new Promise((resolve,reject)=>
+setTimeout(()=>resolve(),time)).then((message)=>console.log("wait a bit")) ; wait(4000);
