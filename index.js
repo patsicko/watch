@@ -122,3 +122,25 @@ function add(n,m,callback){
     let result=n+m; callback(result);
 } 
  add(3,5,display);
+
+
+
+
+ let promise=new Promise((resolve,reject)=>{
+    let x=5;
+    let y=3;
+    let result=x+y;
+
+    if(result==8){
+        resolve("promise successfull");
+    }
+    else{
+        reject("habaye ikibazo");
+    }
+ });
+
+ promise.then((result)=>{
+    console.log(result);
+ }).catch((error)=>{
+    console.log(error);
+ });
