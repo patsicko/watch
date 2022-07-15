@@ -112,3 +112,13 @@ document.getElementById("year").innerHTML=new Date().getFullYear();
 }
 calendar();
 
+
+
+function display(something){
+    console.log(something);
+}
+
+function add(n,m,callback){ 
+    let result=n+m; callback(result);
+} 
+ add(3,5,display);
