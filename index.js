@@ -114,14 +114,18 @@ calendar();
 
 
 
-function display(something){
-    console.log(something);
-}
+// function display(something){
+//     console.log(something);
+// }
 
-function add(n,m,callback){ 
-    let result=n+m; callback(result);
-} 
- add(3,5,display);
+// function add(n,m,callback){ 
+//     let result=n+m; callback(result);
+// } 
+//  add(3,5,display);
+
+
+
+
 
 
 
@@ -139,8 +143,34 @@ function add(n,m,callback){
     }
  });
 
+//  promise.then((result)=>{
+//     console.log(result);
+//  }).catch((error)=>{
+//     console.log(error);
+//  });
+
+
+
+
+ let otherPromise=new Promise((resolve,reject)=>{
+    const message="this is a new promise";
+    resolve(message);
+    
+ })
+ otherPromise.then((message)=>{
+    console.log(message);
+})
+
+
  promise.then((result)=>{
     console.log(result);
  }).catch((error)=>{
-    console.log(error);
- });
+    console.log("error");
+
+ })
+
+
+
+
+
+
