@@ -1,4 +1,4 @@
-
+"use strict";
 // setInterval(()=>{
 
 //     setTimeout(()=>{
@@ -77,6 +77,7 @@ function watch(){
 
     setTimeout(()=>{
        watch();
+       
     },1000)
     let timer=new Date();
     
@@ -157,45 +158,225 @@ calendar();
 
 
 
-let numbers=(arr)=>{let promise=new Promise((resolve,reject)=>{
-    if(!Array.isArray(arr)){
-        reject("not an array!");
-    }
+
+
+// let numbers=(arr)=>{let promise=new Promise((resolve,reject)=>{
+//     if(!Array.isArray(arr)){
+//         reject("not an array!");
+//     }
+    
+// let even=arr.filter(item=>item%2===0)
+
+
+// console.log(even);
+
+// let mult=even.map(item=>
+//     item*2
+// )
+
+
+// resolve(mult);
+
+// })
+
+// promise.then((data)=>{
+//     console.log(data.map(item=>item+100))
+// }).catch((error)=>{
+//     console.log(error);
+// })
+
+// }
+
+// let myArr=[3,6,7,8,12,14,18,19];
+// let x=[1,3,5,7,9];
+// let y=26;
+
+// numbers(myArr);
+// numbers(x);
+// numbers(y);
+
+// const wait=time=>new Promise((resolve,reject)=>
+//     setTimeout(()=>resolve(),time)).then((message)=>console.log("wait a bit")) ;
+//      wait(4000);
+
+
+
+
+
+
+// check the age to determine the eligibility to vote
+// let age = 15;
+// let result;
+
+// if (age >= 18) {
+//       result = "You are eligible to vote.";
+// } else {
+//       result = "You are not eligible to vote yet.";
+// }
+
+// console.log(result);
+
+// ternary operator to check the eligibility to vote
+
+
+// let age = 15;
+// let result =
+//     (age >= 18) ? "You are eligible to vote." : "You are not eligible to vote yet";
+// console.log(result);
+
+
+// function Person(name,age,profession){
+//     this.name=name;
+//     this.age=age;
+//     this.profession=profession;
+    
+//     this.all=function(){
+//         // console.log(this.name+" "+this.age+" "+this.profession);
+
+//       for(let address in this){
+//         console.log(`${address}:${Person[address]}`)
+//        }
+//     }
+    
+// }
+
+
+
+// Person.prototype=fn();
+// const fn=()=>{
+//     for(const add in Person){
+//         console.log(`${add}:${Person[add]}`);
+//     }
+// }
+
+// const person1=new Person("Rusanganwa","25","IT");
+
+// person1.all();
+
+
+
+// const universities=fetch('http://universities.hipolabs.com/search?country=Rwanda')
+// // console.log(data);
+//   .then((universities) => universities.json())
+//   .then((data) => console.log(data));
+
+//  const tm=()=>{
+//     setTimeout(()=>{
+//       tm();
+//       },1000)
+//       console.log(new Date())
+//       console.log("this")
+//  }
     
 
-let even=arr.filter(item=>item%2===0)
+// // tm();
+  
 
-console.log(even);
+// const today=new Date();
+// //    today.setDate(today.getDate()+15)
+//    console.log(today.getDay())
 
-let mult=even.map(item=>
-    item*2
-)
-
-
-// resolve(even);
-resolve(mult);
+  
 
 
+
+// function Address(name,age){
  
-})
+// this.name=name;
+// this.age=age
 
-promise.then((data)=>{
-    console.log(data.map(item=>item+100))
-}).catch((error)=>{
-    console.log(error);
-})
+// }
+
+// const person=new Address("peter",20);
+// const man=new Address("Smith",30)
+
+// console.log(person);
+// console.log(man);
+
+
+
+// console.log(Address);
+// Date();
+// const time=new Date();
+
+
+// console.log(time);
+
+// console.log(time.getFullYear())
+// console.log(time.getMonth());
+// console.log(time.getDay())
+// console.log(time.getHours())
+// console.log(time.getMinutes())
+// console.log(time.getDate())
+
+// time.setDate(time.getDate()+2);
+
+// console.log(time)
+// console.log(time.getDay())
+
+// console.log(new Date().getDay())
+
+
+// const days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","saturday"];
+
+// console.log(days[new Date().getDay()]);
+
+// const myPromise=new Promise((resolve,reject)=>{
+
+//     const a=3,b=9;
+//     const res=b/a;
+
+//     if(res==3){
+//         resolve("promise is resolved with response of"+" "+res)
+//     }else{
+//         reject(err)
+//     }
+
+
+// }).then(res=>console.log(res)).catch((err)=>{
+//     // console.log("something went wrong");
+// })
+
+
+const fetchData=async()=>{
+    const data=await (await fetch("https://picsum.photos/v2/list")).json();
+    console.log(data)
+   
+   
+    
+}
+// fetchData();
+
+
+
+
+const Adress={
+    contry:"Rwanda",
+    province:'western',
+    district:'musanze',
+    sector:'muhoza',
+    all(){
+       
+        console.log(this);
+        
+        setTimeout(()=>{
+            
+            console.log(this);
+        },1000)
+        
+    }
+
 
 }
 
-let myArr=[3,6,7,8,12,14,18,19];
-let x=[1,3,5,7,9];
-let y=26;
-
-numbers(myArr);
-numbers(x);
-numbers(y);
+Adress.all()
 
 
 
-let wait=time=>new Promise((resolve,reject)=>
-setTimeout(()=>resolve(),time)).then((message)=>console.log("wait a bit")) ; wait(4000);
+
+
+
+// const all=Adress.all;
+// all();
+
+
